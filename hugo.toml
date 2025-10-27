@@ -1,5 +1,5 @@
 baseURL = 'https://yusufesen1.github.io/milan-digital-twin/'
-languageCode = 'tr'
+languageCode = 'en-US'
 title = 'Historical Digital Twin of Milan'
 theme = 'yusuf-theme'
 
