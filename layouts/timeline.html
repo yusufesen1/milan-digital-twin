@@ -1,0 +1,203 @@
+{{ define "title" }}Timeline - {{ .Site.Title }}{{ end }}
+
+{{ define "head" }}
+    <link href="{{ "css/timeline.css" | relURL }}" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+    <!-- Timeline Page -->
+    <section class="timeline-page">
+        <div class="timeline-container">
+            <!-- Header -->
+            <div class="timeline-header">
+                <h1>Milano Through Time</h1>
+                <p>Journey through the four great eras that shaped Milan's magnificent heritage</p>
+            </div>
+
+            <!-- Timeline Main -->
+            <div class="timeline-main">
+                <!-- Central line -->
+                <div class="timeline-line"></div>
+
+                <!-- Roman Era -->
+                <div class="timeline-period" id="roman">
+                    <div class="period-icon">
+                        <svg viewBox="0 0 300 200">
+                            <rect x="50" y="150" width="200" height="20" fill="currentColor"/>
+                            <rect x="80" y="100" width="140" height="50" fill="currentColor"/>
+                            <ellipse cx="150" cy="90" rx="40" ry="20" fill="currentColor"/>
+                            <rect x="145" y="70" width="10" height="20" fill="currentColor"/>
+                            <rect x="220" y="60" width="20" height="90" fill="currentColor"/>
+                            <polygon points="220,60 230,45 240,60" fill="currentColor"/>
+                            <path d="M 90 130 Q 110 115 130 130" fill="none" stroke="white" stroke-width="3"/>
+                            <path d="M 140 130 Q 160 115 180 130" fill="none" stroke="white" stroke-width="3"/>
+                            <path d="M 190 130 Q 210 115 230 130" fill="none" stroke="white" stroke-width="3"/>
+                            <rect x="228" y="40" width="4" height="12" fill="currentColor"/>
+                            <rect x="225" y="43" width="10" height="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="period-content">
+                        <div class="period-date">222 BC - 476 AD</div>
+                        <h3 class="period-title">Roman Era</h3>
+                        <p class="period-subtitle">Mediolanum - The Western Capital</p>
+                        <p class="period-description">
+                            Milan's story begins as Mediolanum, founded by the Celtic Insubres and conquered by the Romans in 222 BC. 
+                            Under Roman rule, the city flourished as a major commercial and military center. In 286 AD, Emperor Diocletian 
+                            made Mediolanum the capital of the Western Roman Empire, establishing it as one of the most important cities 
+                            in the ancient world. The famous Edict of Milan, issued by Emperor Constantine in 313 AD, granted religious 
+                            tolerance throughout the empire, marking a pivotal moment in Christian history.
+                        </p>
+                        <div class="key-events">
+                            <h4>Key Events</h4>
+                            <ul class="events-list">
+                                <li>222 BC - Roman conquest of Celtic Mediolanum</li>
+                                <li>286 AD - Becomes capital of Western Roman Empire</li>
+                                <li>313 AD - Edict of Milan grants religious freedom</li>
+                                <li>374 AD - St. Ambrose becomes bishop</li>
+                                <li>402 AD - Imperial court moves to Ravenna</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gothic Period -->
+                <div class="timeline-period" id="gothic">
+                    <div class="period-icon">
+                        <svg viewBox="0 0 400 300">
+                            <rect x="50" y="250" width="300" height="20" fill="currentColor"/>
+                            <rect x="80" y="150" width="240" height="100" fill="currentColor"/>
+                            <polygon points="100,150 150,100 180,120 200,100 220,120 250,100 280,120 300,100 320,150" fill="currentColor"/>
+                            <rect x="180" y="80" width="40" height="70" fill="currentColor"/>
+                            <polygon points="180,80 200,50 220,80" fill="currentColor"/>
+                            <rect x="120" y="100" width="20" height="50" fill="currentColor"/>
+                            <polygon points="120,100 130,80 140,100" fill="currentColor"/>
+                            <rect x="260" y="100" width="20" height="50" fill="currentColor"/>
+                            <polygon points="260,100 270,80 280,100" fill="currentColor"/>
+                            <circle cx="130" cy="180" r="8" fill="white"/>
+                            <circle cx="160" cy="180" r="8" fill="white"/>
+                            <circle cx="200" cy="180" r="12" fill="white"/>
+                            <circle cx="240" cy="180" r="8" fill="white"/>
+                            <circle cx="270" cy="180" r="8" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="period-content">
+                        <div class="period-date">1386 - 1500 AD</div>
+                        <h3 class="period-title">Gothic Period</h3>
+                        <p class="period-subtitle">The Cathedral and Medieval Splendor</p>
+                        <p class="period-description">
+                            The Gothic period witnessed Milan's transformation into a medieval powerhouse under the Visconti family. 
+                            The most iconic achievement of this era was the beginning of the Duomo construction in 1386, a masterpiece 
+                            of Gothic architecture that would take nearly six centuries to complete. The city became a center of trade 
+                            and craftsmanship, with magnificent palaces and churches rising throughout the urban landscape. The Visconti 
+                            and later the Sforza families established Milan as one of Italy's most powerful city-states.
+                        </p>
+                        <div class="key-events">
+                            <h4>Key Events</h4>
+                            <ul class="events-list">
+                                <li>1277 - Visconti family rises to power</li>
+                                <li>1386 - Construction of the Duomo begins</li>
+                                <li>1395 - Gian Galeazzo Visconti becomes Duke</li>
+                                <li>1450 - Sforza family takes control</li>
+                                <li>1492 - La Scala della Ragione completed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Renaissance -->
+                <div class="timeline-period" id="renaissance">
+                    <div class="period-icon">
+                        <svg viewBox="0 0 400 200">
+                            <rect x="50" y="150" width="300" height="30" fill="currentColor"/>
+                            <rect x="80" y="80" width="240" height="70" fill="currentColor"/>
+                            <rect x="180" y="40" width="40" height="110" fill="currentColor"/>
+                            <rect x="185" y="30" width="30" height="20" fill="currentColor"/>
+                            <circle cx="200" cy="20" r="8" fill="currentColor"/>
+                            <rect x="80" y="60" width="30" height="90" fill="currentColor"/>
+                            <polygon points="80,60 95,40 110,60" fill="currentColor"/>
+                            <rect x="290" y="60" width="30" height="90" fill="currentColor"/>
+                            <polygon points="290,60 305,40 320,60" fill="currentColor"/>
+                            <rect x="190" y="120" width="20" height="30" fill="white"/>
+                            <rect x="90" y="100" width="8" height="12" fill="white"/>
+                            <rect x="300" y="100" width="8" height="12" fill="white"/>
+                            <rect x="190" y="60" width="8" height="12" fill="white"/>
+                            <rect x="202" y="60" width="8" height="12" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="period-content">
+                        <div class="period-date">1450 - 1600 AD</div>
+                        <h3 class="period-title">Renaissance</h3>
+                        <p class="period-subtitle">Leonardo's Milan and Artistic Flowering</p>
+                        <p class="period-description">
+                            The Renaissance brought unprecedented cultural flourishing to Milan under the Sforza dynasty. The court of 
+                            Ludovico Sforza attracted the greatest artists of the age, most notably Leonardo da Vinci, who spent nearly 
+                            two decades in the city (1482-1499). During this period, Leonardo created masterpieces including "The Last 
+                            Supper" at Santa Maria delle Grazie and designed innovative engineering projects. The Sforza Castle was 
+                            expanded and beautified, becoming one of Europe's most magnificent ducal residences and a center of Renaissance 
+                            learning and art.
+                        </p>
+                        <div class="key-events">
+                            <h4>Key Events</h4>
+                            <ul class="events-list">
+                                <li>1450 - Francesco Sforza becomes Duke of Milan</li>
+                                <li>1482 - Leonardo da Vinci arrives in Milan</li>
+                                <li>1495-1498 - Creation of "The Last Supper"</li>
+                                <li>1499 - French invasion ends Sforza rule</li>
+                                <li>1535 - Spanish rule begins</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Milan -->
+                <div class="timeline-period" id="modern">
+                    <div class="period-icon">
+                        <svg viewBox="0 0 200 300">
+                            <rect x="20" y="250" width="160" height="50" fill="currentColor"/>
+                            <rect x="40" y="100" width="120" height="150" fill="currentColor"/>
+                            <rect x="50" y="110" width="15" height="8" fill="white"/>
+                            <rect x="70" y="110" width="15" height="8" fill="white"/>
+                            <rect x="90" y="110" width="15" height="8" fill="white"/>
+                            <rect x="110" y="110" width="15" height="8" fill="white"/>
+                            <rect x="130" y="110" width="15" height="8" fill="white"/>
+                            <rect x="50" y="130" width="15" height="8" fill="white"/>
+                            <rect x="70" y="130" width="15" height="8" fill="white"/>
+                            <rect x="90" y="130" width="15" height="8" fill="white"/>
+                            <rect x="110" y="130" width="15" height="8" fill="white"/>
+                            <rect x="130" y="130" width="15" height="8" fill="white"/>
+                            <rect x="80" y="50" width="40" height="50" fill="currentColor"/>
+                            <circle cx="100" cy="30" r="15" fill="currentColor"/>
+                            <rect x="95" y="15" width="10" height="20" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="period-content">
+                        <div class="period-date">1800 - Present</div>
+                        <h3 class="period-title">Modern Milan</h3>
+                        <p class="period-subtitle">Industrial Capital to Fashion Metropolis</p>
+                        <p class="period-description">
+                            Modern Milan emerged as Italy's economic powerhouse during the Industrial Revolution. The opening of La Scala 
+                            in 1778 established the city's cultural prestige, while the 19th century brought railways, factories, and 
+                            urban expansion. The 20th century saw Milan's transformation into the global fashion and design capital we know 
+                            today, hosting major international events like Expo 2015 and preparing for the 2026 Winter Olympics. Today's 
+                            Milan brilliantly balances its rich historical heritage with cutting-edge innovation and contemporary architecture.
+                        </p>
+                        <div class="key-events">
+                            <h4>Key Events</h4>
+                            <ul class="events-list">
+                                <li>1778 - La Scala opera house opens</li>
+                                <li>1861 - Milan joins the Kingdom of Italy</li>
+                                <li>1946 - Birth of Italian fashion industry</li>
+                                <li>2015 - Milan Expo attracts 21 million visitors</li>
+                                <li>2026 - Milan-Cortina Winter Olympics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+{{ define "scripts" }}
+    <script src="{{ "js/timeline.js" | relURL }}"></script>
+{{ end }}

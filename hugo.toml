@@ -1,0 +1,64 @@
+baseURL = 'http://localhost:1313'
+languageCode = 'tr'
+title = 'Historical Digital Twin of Milan'
+theme = 'yusuf-theme'
+
+[params]
+  subtitle = "Discover Milan's Rich History"
+  
+  [params.hero]
+    title = "Discover Milan's Rich History"
+    subtitle = "Journey through centuries of architectural marvels, cultural evolution, and historical milestones that shaped one of Italy's most magnificent cities."
+    button_text = "Explore Timeline"
+  
+  [params.content_section]
+    title = "Historical Highlights"
+  
+  [params.timeline]
+    title = "Milano Timeline"
+    subtitle = "Explore the key historical periods that shaped Milan through the centuries"
+
+  # Historical Cards Data
+  [[params.historical_cards]]
+    image_text = "Roman Mediolanum"
+    title = "Ancient Origins"
+    description = "Discover Milan's Roman roots as Mediolanum, the western capital of the Roman Empire and birthplace of the Edict of Milan."
+  
+  [[params.historical_cards]]
+    image_text = "Medieval Splendor"
+    title = "Medieval Power"
+    description = "Explore the rise of the Visconti and Sforza dynasties, and the construction of the iconic Duomo cathedral."
+  
+  [[params.historical_cards]]
+    image_text = "Renaissance Art"
+    title = "Renaissance Flowering"
+    description = "Experience Milan's golden age with Leonardo da Vinci's masterpieces and architectural innovations."
+  
+  [[params.historical_cards]]
+    image_text = "Industrial Revolution"
+    title = "Industrial Transformation"
+    description = "Witness Milan's evolution into Italy's economic powerhouse during the Industrial Revolution."
+  
+  [[params.historical_cards]]
+    image_text = "Modern Milan"
+    title = "Contemporary Design"
+    description = "See how Milan became a global fashion and design capital, hosting Expo 2015 and the upcoming Winter Olympics."
+  
+  [[params.historical_cards]]
+    image_text = "Cultural Heritage"
+    title = "Artistic Legacy"
+    description = "Immerse yourself in Milan's rich artistic heritage from La Scala opera house to contemporary galleries."
+
+  # About Page Gallery Images (list olarak)
+  about_gallery = [
+    "milan1.jpg",
+    "milan2.jpg",
+    "milan3.jpg",
+    "milan4.jpg",
+    "milan5.jpg",
+    "milan6.jpg",
+    "milan7.jpg",
+    "milan8.jpg",
+    "milan9.jpg",
+    "milan10.jpg"
+  ]

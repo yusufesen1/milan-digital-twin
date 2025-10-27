@@ -1,0 +1,173 @@
+{{ define "title" }}{{ .Site.Title }} - {{ .Site.Params.subtitle | default "Historical Digital Twin of Milan" }}{{ end }}
+
+{{ define "main" }}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="{{ "sitevideo.mp4" | relURL }}" type="video/mp4">
+                    <div class="video-placeholder">
+                        Video yüklenemiyor. Tarayıcınız bu video formatını desteklemiyor olabilir.
+                    </div>
+                </video>
+            </div>
+            <div class="hero-text">
+                <h1>{{ .Site.Params.hero.title | default "Discover Milan's Rich History" }}</h1>
+                <p>{{ .Site.Params.hero.subtitle | default "Journey through centuries of architectural marvels, cultural evolution, and historical milestones that shaped one of Italy's most magnificent cities." }}</p>
+                <button class="cta-button">{{ .Site.Params.hero.button_text | default "Explore Timeline" }}</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Preview -->
+    <section class="content-preview">
+        <div class="preview-container">
+            <h2 class="section-title">{{ .Site.Params.content_section.title | default "Historical Highlights" }}</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav desktop-nav" id="prevBtn">‹</button>
+                
+                <div class="cards-container">
+                    <div class="cards-wrapper" id="cardsWrapper">
+                        {{ range .Site.Params.historical_cards }}
+                        <div class="card">
+                            <div class="card-image">{{ .image_text }}</div>
+                            <div class="card-content">
+                                <h3 class="card-title">{{ .title }}</h3>
+                                <p class="card-description">{{ .description }}</p>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                
+                <button class="carousel-nav desktop-nav" id="nextBtn">›</button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+                <button class="carousel-nav" id="prevBtnMobile">‹</button>
+                <button class="carousel-nav" id="nextBtnMobile">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milano Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <h2>{{ .Site.Params.timeline.title | default "Milano Timeline" }}</h2>
+                <p>{{ .Site.Params.timeline.subtitle | default "Explore the key historical periods that shaped Milan through the centuries" }}</p>
+            </div>
+            
+            <div class="timeline-wrapper">
+                
+                <!-- Timeline items -->
+                <div class="timeline-item item-1">
+                    <div class="timeline-button">
+                        <!-- Roman Basilica Icon -->
+                        <svg viewBox="0 0 300 200">
+                            <!-- Base -->
+                            <rect x="50" y="150" width="200" height="20" fill="currentColor"/>
+                            <!-- Main building -->
+                            <rect x="80" y="100" width="140" height="50" fill="currentColor"/>
+                            <!-- Dome -->
+                            <ellipse cx="150" cy="90" rx="40" ry="20" fill="currentColor"/>
+                            <rect x="145" y="70" width="10" height="20" fill="currentColor"/>
+                            <!-- Bell tower -->
+                            <rect x="220" y="60" width="20" height="90" fill="currentColor"/>
+                            <polygon points="220,60 230,45 240,60" fill="currentColor"/>
+                            <!-- Arches -->
+                            <path d="M 90 130 Q 110 115 130 130" fill="none" stroke="white" stroke-width="3"/>
+                            <path d="M 140 130 Q 160 115 180 130" fill="none" stroke="white" stroke-width="3"/>
+                            <path d="M 190 130 Q 210 115 230 130" fill="none" stroke="white" stroke-width="3"/>
+                            <!-- Cross on tower -->
+                            <rect x="228" y="40" width="4" height="12" fill="currentColor"/>
+                            <rect x="225" y="43" width="10" height="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-label">Roman Era</div>
+                </div>
+                
+                <div class="timeline-item item-2">
+                    <div class="timeline-button">
+                        <!-- Milan Cathedral Icon -->
+                        <svg viewBox="0 0 400 300">
+                            <rect x="50" y="250" width="300" height="20" fill="currentColor"/>
+                            <rect x="80" y="150" width="240" height="100" fill="currentColor"/>
+                            <!-- Main facade -->
+                            <polygon points="100,150 150,100 180,120 200,100 220,120 250,100 280,120 300,100 320,150" fill="currentColor"/>
+                            <!-- Central tower -->
+                            <rect x="180" y="80" width="40" height="70" fill="currentColor"/>
+                            <polygon points="180,80 200,50 220,80" fill="currentColor"/>
+                            <!-- Side spires -->
+                            <rect x="120" y="100" width="20" height="50" fill="currentColor"/>
+                            <polygon points="120,100 130,80 140,100" fill="currentColor"/>
+                            <rect x="260" y="100" width="20" height="50" fill="currentColor"/>
+                            <polygon points="260,100 270,80 280,100" fill="currentColor"/>
+                            <!-- Windows -->
+                            <circle cx="130" cy="180" r="8" fill="white"/>
+                            <circle cx="160" cy="180" r="8" fill="white"/>
+                            <circle cx="200" cy="180" r="12" fill="white"/>
+                            <circle cx="240" cy="180" r="8" fill="white"/>
+                            <circle cx="270" cy="180" r="8" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-label">Gothic Period</div>
+                </div>
+                
+                <div class="timeline-item item-3">
+                    <div class="timeline-button">
+                        <!-- Sforza Castle Icon -->
+                        <svg viewBox="0 0 400 200">
+                            <rect x="50" y="150" width="300" height="30" fill="currentColor"/>
+                            <rect x="80" y="80" width="240" height="70" fill="currentColor"/>
+                            <!-- Central tower -->
+                            <rect x="180" y="40" width="40" height="110" fill="currentColor"/>
+                            <rect x="185" y="30" width="30" height="20" fill="currentColor"/>
+                            <circle cx="200" cy="20" r="8" fill="currentColor"/>
+                            <!-- Side towers -->
+                            <rect x="80" y="60" width="30" height="90" fill="currentColor"/>
+                            <polygon points="80,60 95,40 110,60" fill="currentColor"/>
+                            <rect x="290" y="60" width="30" height="90" fill="currentColor"/>
+                            <polygon points="290,60 305,40 320,60" fill="currentColor"/>
+                            <!-- Gate -->
+                            <rect x="190" y="120" width="20" height="30" fill="white"/>
+                            <!-- Windows -->
+                            <rect x="90" y="100" width="8" height="12" fill="white"/>
+                            <rect x="300" y="100" width="8" height="12" fill="white"/>
+                            <rect x="190" y="60" width="8" height="12" fill="white"/>
+                            <rect x="202" y="60" width="8" height="12" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-label">Renaissance</div>
+                </div>
+                
+                <div class="timeline-item item-4">
+                    <div class="timeline-button">
+                        <!-- Modern Skyscraper Icon -->
+                        <svg viewBox="0 0 200 600">
+                            <rect x="20" y="550" width="160" height="50" fill="currentColor"/>
+                            <rect x="40" y="100" width="120" height="450" fill="currentColor"/>
+                            <rect x="50" y="110" width="15" height="8" fill="white"/>
+                            <rect x="70" y="110" width="15" height="8" fill="white"/>
+                            <rect x="90" y="110" width="15" height="8" fill="white"/>
+                            <rect x="110" y="110" width="15" height="8" fill="white"/>
+                            <rect x="130" y="110" width="15" height="8" fill="white"/>
+                            <rect x="50" y="130" width="15" height="8" fill="white"/>
+                            <rect x="70" y="130" width="15" height="8" fill="white"/>
+                            <rect x="90" y="130" width="15" height="8" fill="white"/>
+                            <rect x="110" y="130" width="15" height="8" fill="white"/>
+                            <rect x="130" y="130" width="15" height="8" fill="white"/>
+                            <rect x="80" y="50" width="40" height="50" fill="currentColor"/>
+                            <circle cx="100" cy="30" r="15" fill="currentColor"/>
+                            <rect x="95" y="15" width="10" height="20" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-label">Modern Milan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

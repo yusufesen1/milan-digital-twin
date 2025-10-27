@@ -1,0 +1,249 @@
+{{ define "title" }}Content - {{ .Site.Title }}{{ end }}
+
+{{ define "head" }}
+    <link href="{{ "css/content.css" | relURL }}" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+    <!-- Content Page -->
+    <main class="content-page">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <h1>Historical Landmarks</h1>
+            <p>Explore Milano's most iconic architectural marvels and cultural treasures that have shaped the city's identity through the centuries</p>
+        </section>
+
+        <!-- Landmarks Section -->
+        <section class="landmarks-section">
+            <!-- Duomo Cathedral -->
+            <article class="landmark duomo">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "milan1.jpg" | relURL }}" alt="Duomo di Milano" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Duomo di Milano</h2>
+                        <p class="landmark-subtitle">Gothic Marvel • 1386-1965</p>
+                        <p class="landmark-description">
+                            The crown jewel of Milan, the Duomo stands as one of the world's most spectacular Gothic cathedrals. This architectural masterpiece took nearly six centuries to complete, featuring an intricate facade adorned with 3,400 statues and 135 spires reaching toward the heavens.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Over 11,000 square meters of stunning stained glass</li>
+                            <li>The famous golden Madonnina statue crowning the main spire</li>
+                            <li>Breathtaking rooftop terraces with panoramic city views</li>
+                            <li>Archaeological remains beneath the cathedral dating to 4th century</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Cathedral Gallery</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "dinterior.jpg" | relURL }}" alt="Duomo Interior" /></div>
+                        <div class="gallery-item"><img src="{{ "drooftop.jpg" | relURL }}" alt="Duomo Rooftop" /></div>
+                        <div class="gallery-item"><img src="{{ "dmad.jpg" | relURL }}" alt="Madonnina Statue" /></div>
+                        <div class="gallery-item"><img src="{{ "dnight.jpeg" | relURL }}" alt="Duomo at Night" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Galleria Vittorio Emanuele II -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "milan3.jpg" | relURL }}" alt="Galleria Vittorio Emanuele II" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Galleria Vittorio Emanuele II</h2>
+                        <p class="landmark-subtitle">Shopping Arcade • 1865-1877</p>
+                        <p class="landmark-description">
+                            Known as "Il Salotto di Milano" (Milan's Drawing Room), this elegant 19th-century glass-vaulted shopping gallery connects Piazza del Duomo to La Scala. The gallery represents one of the world's first shopping malls and remains a symbol of Milan's commercial elegance.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Stunning glass dome and iron architecture by Giuseppe Mengoni</li>
+                            <li>Luxury boutiques including Prada's historic flagship store</li>
+                            <li>The famous mosaic bull - spin on its heels for good luck</li>
+                            <li>Historic cafés serving as literary and political meeting points</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Gallery Collection</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "gdome.jpg" | relURL }}" alt="Galleria Dome" /></div>
+                        <div class="gallery-item"><img src="{{ "gbull.jpg" | relURL }}" alt="Galleria Bull Mosaic" /></div>
+                        <div class="gallery-item"><img src="{{ "gprada.jpg" | relURL }}" alt="Prada Store" /></div>
+                        <div class="gallery-item"><img src="{{ "gnight,.jpg" | relURL }}" alt="Galleria at Night" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navigli -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "n1.jpg" | relURL }}" alt="Navigli Canals" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Navigli</h2>
+                        <p class="landmark-subtitle">Historic Canals • 12th-19th Century</p>
+                        <p class="landmark-description">
+                            Milan's ancient canal system, originally designed for transportation and irrigation, now serves as the city's vibrant nightlife district. These waterways, some designed by Leonardo da Vinci himself, showcase Milan's ingenious medieval engineering and contemporary cultural life.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Naviglio Grande: The oldest canal dating back to 1177</li>
+                            <li>Leonardo da Vinci's innovative lock system designs</li>
+                            <li>Bustling aperitivo culture along canal-side bars</li>
+                            <li>Antique markets and artisan workshops</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Canal Views</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "n2.jpg" | relURL }}" alt="Naviglio Grande" /></div>
+                        <div class="gallery-item"><img src="{{ "n3.jpg" | relURL }}" alt="Aperitivo Scene" /></div>
+                        <div class="gallery-item"><img src="{{ "n4.jpg" | relURL }}" alt="Canal Locks" /></div>
+                        <div class="gallery-item"><img src="{{ "n5.jpg" | relURL }}" alt="Antique Market" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Arco della Pace -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "a1.jpg" | relURL }}" alt="Arco della Pace" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Arco della Pace</h2>
+                        <p class="landmark-subtitle">Neoclassical Arch • 1807-1838</p>
+                        <p class="landmark-description">
+                            This magnificent neoclassical triumphal arch stands at the entrance to Parco Sempione, originally commissioned by Napoleon to celebrate his victories. Ironically completed under Austrian rule, it was renamed "Arch of Peace" and now symbolizes Milan's resilient spirit through changing political fortunes.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>25 meters high with intricate sculptural decorations</li>
+                            <li>Six Corinthian columns framing three archways</li>
+                            <li>Bronze Sestiga (six-horse chariot) crowning the structure</li>
+                            <li>Gateway to the beautiful Parco Sempione</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Arch Perspectives</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "a2.jpg" | relURL }}" alt="Arch Details" /></div>
+                        <div class="gallery-item"><img src="{{ "a3.jpg" | relURL }}" alt="Bronze Sestiga" /></div>
+                        <div class="gallery-item"><img src="{{ "a4.jpg" | relURL }}" alt="View to Park" /></div>
+                        <div class="gallery-item"><img src="{{ "a5.jpg" | relURL }}" alt="Sunset View" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Castello Sforzesco -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "c1.jpg" | relURL }}" alt="Castello Sforzesco" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Castello Sforzesco</h2>
+                        <p class="landmark-subtitle">Renaissance Fortress • 1358-1499</p>
+                        <p class="landmark-description">
+                            This imposing fortress, built by the powerful Sforza family, served as the residence of Milanese dukes during the Renaissance. Today it houses several museums and collections, including Michelangelo's final masterpiece, the Pietà Rondanini, representing five centuries of art and history.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Michelangelo's unfinished Pietà Rondanini sculpture</li>
+                            <li>Extensive art collections spanning medieval to contemporary</li>
+                            <li>Renaissance courtyards and defensive towers</li>
+                            <li>Musical instruments museum with rare historical pieces</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Castle Collection</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "c2.jpg" | relURL }}" alt="Pietà Rondanini" /></div>
+                        <div class="gallery-item"><img src="{{ "c3.jpg" | relURL }}" alt="Renaissance Courtyard" /></div>
+                        <div class="gallery-item"><img src="{{ "c4.jpg" | relURL }}" alt="Torre del Filarete" /></div>
+                        <div class="gallery-item"><img src="{{ "c5.jpg" | relURL }}" alt="Museum Interior" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Teatro alla Scala -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "t4.jpg" | relURL }}" alt="Teatro alla Scala" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Teatro alla Scala</h2>
+                        <p class="landmark-subtitle">Opera House • 1778</p>
+                        <p class="landmark-description">
+                            La Scala stands as the world's most prestigious opera house, where legendary composers like Verdi and Puccini premiered their masterpieces. This neoclassical theater has hosted the greatest voices in opera history and continues to set the global standard for operatic excellence.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Exceptional acoustics in the historic auditorium</li>
+                            <li>Traditional December 7th season opening (St. Ambrose Day)</li>
+                            <li>Museum with costumes, instruments, and opera memorabilia</li>
+                            <li>Training ground for world-renowned singers and dancers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Opera House</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "t2.jpg" | relURL }}" alt="Scala Auditorium" /></div>
+                        <div class="gallery-item"><img src="{{ "t3.jpg" | relURL }}" alt="Scala Stage" /></div>
+                        <div class="gallery-item"><img src="{{ "t1.jpg" | relURL }}" alt="Opera Boxes" /></div>
+                        <div class="gallery-item"><img src="{{ "t5.jpg" | relURL }}" alt="Scala Museum" /></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pinacoteca di Brera -->
+            <article class="landmark">
+                <div class="landmark-content">
+                    <div class="landmark-image">
+                        <img src="{{ "b1.jpg" | relURL }}" alt="Pinacoteca di Brera" />
+                    </div>
+                    <div class="landmark-text">
+                        <h2 class="landmark-title">Pinacoteca di Brera</h2>
+                        <p class="landmark-subtitle">Art Gallery • 1809</p>
+                        <p class="landmark-description">
+                            Housed in a 17th-century Baroque palace, the Brera Gallery contains one of Italy's most important art collections. From Caravaggio's dramatic masterpieces to Renaissance treasures, this museum showcases the artistic heritage that flows through Milan's cultural DNA.
+                        </p>
+                        <ul class="landmark-features">
+                            <li>Caravaggio's "Supper at Emmaus" masterpiece</li>
+                            <li>Raphael's "Marriage of the Virgin" altarpiece</li>
+                            <li>Extensive collection of Lombard Renaissance art</li>
+                            <li>Beautiful botanical garden and historic courtyards</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landmark-gallery">
+                    <h3 class="gallery-title">Art Collection</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="{{ "b2.jpg" | relURL }}" alt="Caravaggio Painting" /></div>
+                        <div class="gallery-item"><img src="{{ "b3.jpg" | relURL }}" alt="Raphael Altarpiece" /></div>
+                        <div class="gallery-item"><img src="{{ "b4.jpg" | relURL }}" alt="Brera Courtyard" /></div>
+                        <div class="gallery-item"><img src="{{ "b5.jpg" | relURL }}" alt="Gallery Hall" /></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption" class="modal-caption"></div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "scripts" }}
+    <script src="{{ "js/content.js" | relURL }}"></script>
+{{ end }}

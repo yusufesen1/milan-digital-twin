@@ -1,0 +1,113 @@
+{{ define "title" }}About - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <!-- Header -->
+            <div class="about-header">
+                <h1>{{ .Params.title | default "About Our Project" }}</h1>
+                <p>{{ .Params.subtitle | default "Discover why we created this digital journey through Milan's magnificent history" }}</p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Vision</h2>
+                    <p>
+                        Milano, a city that has witnessed the rise and fall of empires, the birth of artistic masterpieces, 
+                        and the evolution of modern civilization, deserves to have its rich history preserved and shared 
+                        with the world in the most immersive way possible.
+                    </p>
+                    <p>
+                        Our Historical Digital Twin project was born from a passion to bridge the gap between past and present, 
+                        allowing visitors to experience Milan's transformation through the ages. From its origins as the Roman 
+                        Mediolanum to its current status as a global fashion and design capital, every era tells a story worth preserving.
+                    </p>
+                    
+                    <div class="highlight">
+                        <p>
+                            <strong>We believe that history should not be confined to textbooks.</strong> 
+                            Through cutting-edge digital technology and meticulous historical research, 
+                            we're creating an interactive experience that brings Milan's past to life.
+                        </p>
+                    </div>
+
+                    <p>
+                        This platform serves as a digital repository of knowledge, a virtual museum, 
+                        and an educational tool that makes Milan's incredible heritage accessible to 
+                        researchers, students, tourists, and history enthusiasts worldwide.
+                    </p>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="photo-gallery">
+                    <div class="photo-stream">
+                        <img src="{{ "milan1.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan2.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan3.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan4.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan5.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan6.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan7.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan8.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan9.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan10.jpg" | relURL }}" alt="Milan history">
+                        <!-- Sonsuz döngü için tekrar -->
+                        <img src="{{ "milan1.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan2.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan3.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan4.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan5.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan6.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan7.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan8.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan9.jpg" | relURL }}" alt="Milan history">
+                        <img src="{{ "milan10.jpg" | relURL }}" alt="Milan history">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="mission-section">
+                <div class="about-header">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Mission</h2>
+                    <p>Three core principles guide our work in preserving and sharing Milan's heritage</p>
+                </div>
+
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">🏛️</div>
+                        <h3>Preserve</h3>
+                        <p>
+                            Safeguard Milan's architectural and cultural heritage through detailed digital documentation, 
+                            ensuring that future generations can explore and learn from the city's remarkable past.
+                        </p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="mission-icon">🎓</div>
+                        <h3>Educate</h3>
+                        <p>
+                            Provide an engaging educational platform that makes complex historical narratives 
+                            accessible and interactive, fostering a deeper understanding of Milan's significance.
+                        </p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="mission-icon">🌍</div>
+                        <h3>Connect</h3>
+                        <p>
+                            Bridge geographical and temporal boundaries, connecting people worldwide with Milan's 
+                            heritage and creating a global community of history enthusiasts and cultural explorers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+{{ define "scripts" }}
+    <script src="{{ "js/about.js" | relURL }}"></script>
+{{ end }}

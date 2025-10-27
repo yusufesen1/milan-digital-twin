@@ -1,0 +1,389 @@
+/* ============================================
+   CONTENT PAGE STYLES
+   ============================================ */
+
+/* Content Page Styles */
+.content-page {
+    margin-top: 80px;
+    min-height: 100vh;
+}
+
+.page-hero {
+    background: linear-gradient(135deg, #f5f3f0 0%, #fffcf8 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: inset 0 10px 20px rgba(93, 78, 55, 0.05);
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    color: #5D4E37;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    color: #A0522D;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Landmarks Grid */
+.landmarks-section {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.landmark {
+    margin-bottom: 6rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(93, 78, 55, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landmark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(93, 78, 55, 0.2);
+}
+
+.landmark-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.landmark:nth-child(even) .landmark-content {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.landmark:nth-child(even) .landmark-content > div {
+    direction: ltr;
+}
+
+.landmark-image {
+    background: linear-gradient(135deg, #A0522D, #8B4513);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.landmark-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.landmark:hover .landmark-image img {
+    transform: scale(1.05);
+}
+
+.landmark-text {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landmark-title {
+    font-size: 2.2rem;
+    color: #5D4E37;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.landmark-subtitle {
+    font-size: 1.1rem;
+    color: #A0522D;
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.landmark-description {
+    font-size: 1.1rem;
+    color: #5D4E37;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.landmark-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.landmark-features li {
+    color: #A0522D;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.landmark-features li::before {
+    content: '●';
+    color: #8B4513;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.explore-button {
+    background: linear-gradient(135deg, #A0522D, #8B4513);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.explore-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(160, 82, 45, 0.3);
+}
+
+/* Special styling for Duomo */
+.duomo {
+    background: linear-gradient(135deg, #faf8f5 0%, white 100%);
+    border: 2px solid #A0522D;
+}
+
+.duomo .landmark-title {
+    background: linear-gradient(135deg, #A0522D, #8B4513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Gallery Section for Each Landmark */
+.landmark-gallery {
+    padding: 2rem 3rem;
+    background: #faf8f5;
+    border-top: 1px solid rgba(160, 82, 45, 0.2);
+}
+
+.gallery-title {
+    font-size: 1.3rem;
+    color: #5D4E37;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #A0522D, #8B4513);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(160, 82, 45, 0.8);
+    transform: scale(1.1);
+}
+
+.modal-caption {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+
+/* Smooth scroll animation */
+.landmark {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.landmark:nth-child(1) { animation-delay: 0.1s; }
+.landmark:nth-child(2) { animation-delay: 0.2s; }
+.landmark:nth-child(3) { animation-delay: 0.3s; }
+.landmark:nth-child(4) { animation-delay: 0.4s; }
+.landmark:nth-child(5) { animation-delay: 0.5s; }
+.landmark:nth-child(6) { animation-delay: 0.6s; }
+.landmark:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Content Page Mobile Responsive */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 3rem 1rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    .landmarks-section {
+        padding: 3rem 1rem;
+    }
+
+    .landmark-content {
+        grid-template-columns: 1fr !important;
+        direction: ltr !important;
+    }
+
+    .landmark:nth-child(even) .landmark-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .landmark-image {
+        min-height: 250px;
+    }
+
+    .landmark-text {
+        padding: 2rem 1.5rem;
+    }
+
+    .landmark-title {
+        font-size: 1.8rem;
+    }
+
+    .landmark-gallery {
+        padding: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .modal-close {
+        top: -40px;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-caption {
+        font-size: 1rem;
+        bottom: -50px;
+        padding: 8px 16px;
+    }
+}

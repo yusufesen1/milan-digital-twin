@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{{ "css/style.css" | relURL }}" rel="stylesheet">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="{{ .Site.BaseURL }}">
+                    <img src="{{ "logoson.svg" | relURL }}" alt="{{ .Site.Title }}">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ "about" | relURL }}">About</a></li>
+                <li><a href="{{ "content" | relURL }}">Content</a></li>
+                <li><a href="{{ "timeline" | relURL }}">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Scripts -->
+    <script src="{{ "js/script.js" | relURL }}"></script>
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>
