@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://yusufesen1.github.io/milan-digital-twin/'
 languageCode = 'en-US'
-title = 'My New Hugo Site'
+title = 'Historical Digital Twin of Milan'
 
 [menus]
   [[menus.main]]
