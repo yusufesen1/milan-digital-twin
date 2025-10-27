@@ -1,4 +1,3 @@
----
 title: "Historical Landmarks"
 subtitle: "Explore Milano's most iconic architectural marvels"
 date: 2025-01-15

@@ -3,6 +3,13 @@ languageCode = 'en-US'
 title = 'Historical Digital Twin of Milan'
 theme = 'yusuf-theme'
 
+# Pretty URLs'i devre dışı bırak
+uglyURLs = false
+
+# Permalinks ayarları
+[permalinks]
+  page = "/:filename/"
+  
 [params]
   subtitle = "Discover Milan's Rich History"
   
